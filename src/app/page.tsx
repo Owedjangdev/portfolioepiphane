@@ -1,9 +1,10 @@
-
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
+
+import Link from "next/link";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
@@ -14,8 +15,7 @@ export default function Home() {
           <div className=" text-center xl:text-left">
             <span className="text-xl">Software Developer</span>
             <h1 className=" text-[38px] xl:text-[45px] leading-[1.1] font-semibold mb-6">
-              Hello Im <br />{" "}
-              <span >Epiphane Houehanou</span>{" "}
+              Hello Im <br /> <span>Epiphane Houehanou</span>{" "}
             </h1>
             <p className="max-w-[500px] mb-9 text-white/90">
               I excel at crafting elegant digital experiences and I am
@@ -26,11 +26,10 @@ export default function Home() {
 
             <div className="flex flex-col xl:flex-row items-center gap-4 xl:gap-6 mb-8">
               <Button
-                
                 size="lg"
                 className="uppercase flex items-center gap-2 bg-accent hover:bg-blue-900 text-white transition-colors"
               >
-                <span>Download CV</span>
+                <Link href="/EpiphaneHouehanou.pdf">Download CV</Link>
                 <FiDownload className="text-xl " />
               </Button>
 
