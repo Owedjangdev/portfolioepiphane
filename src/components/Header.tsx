@@ -11,7 +11,7 @@ import MobileNav from "./MobileNav";
 const Header = () => {
   return (
   
-  <header  className=" py-8 xl:py-12 w-  ">
+  <header  className=" py-8 xl:py-12   ">
 
     <div  className="container mx-auto flex items-center justify-between ">
         
@@ -23,15 +23,15 @@ const Header = () => {
 </Link>
 
 {/* desktop nav */}
-<div className="hidden xl:flex items-center gap-8">
+<div className="hidden  xl:flex items-center gap-8">
 
-<Nav/>
+<Nav />
 
 
 
 <Link href="/contact" >
 
-<Button className="text-white" >
+<Button className="text-white " >
  Hire me
 </Button>
 </Link>
@@ -39,7 +39,7 @@ const Header = () => {
 </div>
 
 <div className="xl:hidden">
-  <MobileNav  />
+  <MobileNav   />
 
 </div>
 

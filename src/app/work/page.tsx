@@ -47,7 +47,7 @@ export default function WorkPage() {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-8"
+      className="min-h-scren  w-full flex flex-col justify-center py-12 xl:px-8"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
@@ -70,7 +70,7 @@ export default function WorkPage() {
               <p className="text-white/60 z-20">{project.description}</p>
 
               {/* Stack */}
-              <ul className="flex gap-4 z-20">
+              <ul className="flex gap-4 z-60 flex-wrap">
                 {project.stack.map((item, index) => (
                   <li key={index} className="text-xl text-accent">
                     {item.name}

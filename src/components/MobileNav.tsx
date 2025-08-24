@@ -19,7 +19,7 @@ export default function MobileNav() {
   return (
     <Sheet > 
       <SheetTrigger className="flex justify-center items-center ">
-        <CiMenuFries className="text-[32px] text-accent" />
+        <CiMenuFries className="h-10 w-10 text-accent" />
       </SheetTrigger>
 
       <SheetContent  side="right" className=" flex flex-col w-full sm:max-w-full">
