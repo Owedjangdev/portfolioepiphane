@@ -3,7 +3,9 @@
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "./ui/sheet";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import {CiMenuFries } from 'react-icons/ci';
+
+
 
 const links = [
   { name: "Home", path: "/" },
@@ -19,7 +21,7 @@ export default function MobileNav() {
   return (
     <Sheet > 
       <SheetTrigger className="flex justify-center items-center ">
-        <Menu className="h-10 w-10 text-accent" />
+        <CiMenuFries className="h-[25px] w-[25px] text-accent" />
       </SheetTrigger>
 
       <SheetContent  side="right" className=" flex flex-col w-full sm:max-w-full">

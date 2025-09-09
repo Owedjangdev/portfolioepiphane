@@ -31,6 +31,21 @@ const projects = [
     live: "https://panto1.netlify.app/",
     github: "https://github.com/Owedjangdev/Projet_panto",
   },
+
+
+
+{
+    num: "02",
+    category: "front-end",
+    title: "projet 2 (projet personnel)",
+    description: "Un projet de site e-commerce de vente de vêtements en ligne.",
+    stack: [{ name: "Tailwindcss" }, { name: "React.js" }, { name: "TypeScript" }],
+    image: "/PROJET2.png",
+    live: "https://sitefoodresto.netlify.app/",
+    github: "",
+  },
+
+
   
 
 ];
