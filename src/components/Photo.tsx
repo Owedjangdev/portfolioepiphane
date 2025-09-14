@@ -5,7 +5,7 @@ import Image from "next/image"
 
 const Photo = () => {
   return (
-    <div className="w-full h-full relative flex items-center justify-center">
+    <div className="w-full h-full relative flex items-center justify-center py-4">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -15,7 +15,7 @@ const Photo = () => {
         className="relative"
       >
         {/* Image container */}
-        <motion.div className="relative w-[200px] h-[200px]  xl:w-[350px] xl:h-[350px] z-10">
+        <motion.div className="relative w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] xl:w-[350px] xl:h-[350px] z-10">
           <Image
             src="/photo.png"
             priority
@@ -29,7 +29,7 @@ const Photo = () => {
 
         {/* Circle animé */}
         <motion.svg
-          className="absolute top-0 left-0 w-[200px] xl:w-[350px] h-[200px] xl:h-[350px]"
+          className="absolute top-0 left-0 w-[180px] sm:w-[220px] xl:w-[350px] h-[180px] sm:h-[220px] xl:h-[350px]"
           fill="transparent"
           viewBox="0 0 350 350"
           xmlns="http://www.w3.org/2000/svg"

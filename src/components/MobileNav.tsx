@@ -24,7 +24,7 @@ export default function MobileNav() {
         <CiMenuFries className="h-[25px] w-[25px] text-accent" />
       </SheetTrigger>
 
-      <SheetContent  side="right" className=" flex flex-col w-full sm:max-w-full">
+      <SheetContent  side="right" className="flex flex-col w-full sm:max-w-full text-white">
         <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
         
         {/* logo */}
@@ -36,14 +36,14 @@ export default function MobileNav() {
         </div>
 
         {/* nav */}
-        <nav className="flex flex-col justify-center items-center gap-4">
+        <nav className="flex flex-col justify-center items-center gap-6 mt-8">
           {links.map((link, index) => (
             <SheetClose key={index} asChild>
               <Link
                 href={link.path}
                 className={`${
                   link.path === pathname && "text-accent border-b-2 border-accent"
-                } capitalize text-xl transition-all hover:text-accent`}
+                } capitalize text-xl font-medium transition-all hover:text-accent hover:scale-105`}
               >
                 {link.name}
               </Link>

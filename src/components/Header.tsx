@@ -11,14 +11,14 @@ import MobileNav from "./MobileNav";
 const Header = () => {
   return (
   
-  <header  className=" py-8 xl:py-12   ">
+  <header className="py-6 sm:py-8 xl:py-12">
 
-    <div  className="container mx-auto flex items-center justify-between ">
+    <div className="container mx-auto px-4 flex items-center justify-between">
         
 <Link href="/" className="flex items-center gap-2">
 
-<h1 className="text-4xl font-semibold ">Epiphane</h1>
-<span className=" text-accent text-3xl">.</span>
+<h1 className="text-2xl sm:text-3xl xl:text-4xl font-semibold">Epiphane</h1>
+<span className="text-accent text-2xl sm:text-3xl xl:text-3xl">.</span>
 
 </Link>
 
@@ -31,7 +31,7 @@ const Header = () => {
 
 <Link href="/contact" >
 
-<Button className="text-white " >
+<Button className="text-white text-sm xl:text-base px-4 xl:px-6">
  Hire me
 </Button>
 </Link>
