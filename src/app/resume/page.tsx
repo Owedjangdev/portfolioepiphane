@@ -18,22 +18,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 //About
 
 const about = {
-  title: "About Me",
+  title: "À propos de moi",
   description:
-    "A passionate web developer with a knack for creating dynamic and responsive web applications.",
+    "Un développeur web passionné avec un talent pour créer des applications web dynamiques et réactives.",
 
   info: [
     {
-      fieldName: "Name",
+      fieldName: "Nom",
       fieldValue: "Epiphane Houehanou",
     },
     {
-      fieldName: "Phone",
+      fieldName: "Téléphone",
       fieldValue: "+229  01 54215693",
     },
     {
-      fieldName: "Exprience",
-      fieldValue: "2 years",
+      fieldName: "Expérience",
+      fieldValue: "2 ans",
     },
 
     {
@@ -41,8 +41,8 @@ const about = {
       fieldValue: "epiphane.01",
     },
     {
-      fieldName: "Nationality",
-      fieldValue: "Benin",
+      fieldName: "Nationalité",
+      fieldValue: "Bénin",
     },
     {
       fieldName: "Email",
@@ -51,12 +51,12 @@ const about = {
 
     {
       fieldName: "Freelance",
-      fieldValue: "Available",
+      fieldValue: "Disponible",
     },
 
     {
-      fieldName: "Languages",
-      fieldValue: "French, English",
+      fieldName: "Langues",
+      fieldValue: "Français, Anglais",
     },
   ],
 };
@@ -64,9 +64,9 @@ const about = {
 //Experience
 const experience = {
   icon: "",
-  title: "My Experience",
+  title: "Mon Expérience",
   description:
-    "A brief overview of my professional journey and the skills I have acquired along the way.",
+    "Un bref aperçu de mon parcours professionnel et des compétences que j'ai acquises en cours de route.",
 
   items: [
     {
@@ -93,9 +93,9 @@ const experience = {
 //Education
 const education = {
   icon: "",
-  title: "My Education",
+  title: "Ma Formation",
   description:
-    "A summary of my academic background and the qualifications I have achieved.",
+    "Un résumé de mon parcours académique et des qualifications que j'ai obtenues.",
   items: [
     {
       institution: "University of Technology",
@@ -182,9 +182,9 @@ const education = {
 };
 //Skills
 const skills = {
-  title: "My Skills",
+  title: "Mes Compétences",
   description:
-    "A showcase of my technical skills and proficiencies in various programming languages and frameworks.",
+    "Une vitrine de mes compétences techniques et de mes maîtrises dans divers langages de programmation et frameworks.",
   skillsList: [
     {
       icon: <FaHtml5 />,
@@ -239,10 +239,10 @@ export default function Page() {
           className="flex flex-col xl:flex-row  gap-[60px] text-white"
         >
           <TabsList className="flex flex-col w-full max-w-[380px]  mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education </TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="experience">Expérience</TabsTrigger>
+            <TabsTrigger value="education">Formation</TabsTrigger>
+            <TabsTrigger value="skills">Compétences</TabsTrigger>
+            <TabsTrigger value="about">À propos</TabsTrigger>
           </TabsList>
 
           {/* content */}

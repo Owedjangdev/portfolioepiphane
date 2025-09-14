@@ -6,15 +6,15 @@ import { BsArrowDownRight } from "react-icons/bs";
 const services = [
   {
     num: "01",
-    title: "Web Development",
-    description: "Building responsive and dynamic websites using modern technologies.",
+    title: "Développement Web",
+    description: "Création de sites web réactifs et dynamiques utilisant des technologies modernes.",
     href: "/work",
   },
   
   {
     num: "04",
     title: "LOGO",
-    description: "Improving website visibility and search engine rankings.",
+    description: "Amélioration de la visibilité du site web et du classement dans les moteurs de recherche.",
     href: "/services/seo-optimization",
   },
 ];

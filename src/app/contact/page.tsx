@@ -28,7 +28,7 @@ interface FormData {
 const info = [
   {
     icon: <FaMapMarkerAlt />,
-    title: "Address",
+    title: "Adresse",
     description: "Parakou, Bannikani",
   },
   {
@@ -38,7 +38,7 @@ const info = [
   },
   {
     icon: <FaPhoneAlt />,
-    title: "Phone",
+    title: "Téléphone",
     description: "+229 015421593",
   },
 ];
@@ -127,11 +127,11 @@ const Contact = () => {
               className="flex flex-col gap-6 p-6 bg-[#27272c] rounded-xl"
               onSubmit={handleSubmit}
             >
-              <h3 className="text-accent text-2xl">Lets work together</h3>
+              <h3 className="text-accent text-2xl">Travaillons ensemble</h3>
               <p className="text-white/60">
 
-Ready to Build Together?
-Do you have an idea, an ambitious project, or a technical challenge to overcome? As a web developer, Im here to transform your concepts into high-performing and innovative digital solutions. Whether its for a showcase website, a complex web application, or optimizing your online presence, lets discuss the best way to bring your vision to life.
+Prêt à construire ensemble ?
+Avez-vous une idée, un projet ambitieux ou un défi technique à relever ? En tant que développeur web, je suis là pour transformer vos concepts en solutions numériques performantes et innovantes. Que ce soit pour un site vitrine, une application web complexe ou l&apos;optimisation de votre présence en ligne, discutons de la meilleure façon de donner vie à votre vision.
 
 
               </p>
@@ -152,7 +152,7 @@ Do you have an idea, an ambitious project, or a technical challenge to overcome?
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <Input 
                   type="text" 
-                  placeholder="FirstName" 
+                  placeholder="Prénom" 
                   name="firstname" 
                   value={formData.firstname} 
                   onChange={handleChange} 
@@ -160,7 +160,7 @@ Do you have an idea, an ambitious project, or a technical challenge to overcome?
                 />
                 <Input 
                   type="text" 
-                  placeholder="Lastname" 
+                  placeholder="Nom" 
                   name="lastname" 
                   value={formData.lastname} 
                   onChange={handleChange} 
@@ -168,7 +168,7 @@ Do you have an idea, an ambitious project, or a technical challenge to overcome?
                 />
                 <Input 
                   type="email" 
-                  placeholder="Email address" 
+                  placeholder="Adresse email" 
                   name="email" 
                   value={formData.email} 
                   onChange={handleChange} 
@@ -176,7 +176,7 @@ Do you have an idea, an ambitious project, or a technical challenge to overcome?
                 />
                 <Input 
                   type="tel" 
-                  placeholder="Phone number" 
+                  placeholder="Numéro de téléphone" 
                   name="phone" 
                   value={formData.phone} 
                   onChange={handleChange} 
@@ -186,21 +186,21 @@ Do you have an idea, an ambitious project, or a technical challenge to overcome?
               {/* select */}
               <Select onValueChange={handleSelectChange} value={formData.service}>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="Sélectionnez un service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="Web Development">Web Development</SelectItem>
-                    <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
-                    <SelectItem value="Logo Design">Logo Design</SelectItem>
+                    <SelectLabel>Sélectionnez un service</SelectLabel>
+                    <SelectItem value="Développement Web">Développement Web</SelectItem>
+                    <SelectItem value="Design UI/UX">Design UI/UX</SelectItem>
+                    <SelectItem value="Design de Logo">Design de Logo</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
 
               <Textarea
                 className="h-[200px]"
-                placeholder="Type your message here"
+                placeholder="Tapez votre message ici"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
@@ -213,7 +213,7 @@ Do you have an idea, an ambitious project, or a technical challenge to overcome?
                 type="submit"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
               </Button>
             </form>
           </div>
