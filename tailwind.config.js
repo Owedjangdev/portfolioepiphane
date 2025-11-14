@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '15px',
+      padding: "15px",
     },
     screens: {
       sm: "640px",
@@ -19,23 +19,28 @@ module.exports = {
       xl: "1200px",
     },
     fontFamily: {
-      primary: 'var(--font-jetbrains-mono)',
+      primary: "var(--font-jetbrains-mono)",
     },
     extend: {
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-  primary: '#0a192f', // ← ou un autre bleu
- 
-    accent: {
-          DEFAULT: '#2563eb',     // ton bleu principal (blue-600)
-          hover: '#1d4ed8',       // une version plus foncée (blue-700)
+        primary: {
+          DEFAULT: "#0a192f",
+          foreground: "#ccd6f6",
         },
- 
-}
+        background: "rgb(15 23 42)",
+        accent: {
+          DEFAULT: "#3b82f6",
+          hover: "#2563eb",
+          foreground: "#ffffff",
+        },
+        surface: "#1e293b",
+        muted: "#64748b",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

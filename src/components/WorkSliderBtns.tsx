@@ -1,40 +1,33 @@
+// src/components/WorkSliderBtns.tsx
 "use client";
 
 import { useSwiper } from "swiper/react";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 
-// Interface pour typer les props
 interface WorkSliderBtnsProps {
   containerStyles?: string;
   btnStyles?: string;
-  iconsStyles?: string;
 }
 
-const WorkSliderBtns = ({ 
-  containerStyles = "", 
-  btnStyles = "", 
-  iconsStyles = "" 
-}: WorkSliderBtnsProps) => {
+export default function WorkSliderBtns({ containerStyles, btnStyles }: WorkSliderBtnsProps) {
   const swiper = useSwiper();
-  
+
   return (
     <div className={containerStyles}>
-      <button 
-        className={btnStyles} 
-        onClick={() => swiper?.slidePrev()}
-        aria-label="Slide précédent"
+      <button
+        onClick={() => swiper.slidePrev()}
+        className={btnStyles}
+        aria-label="Précédent"
       >
-        <PiCaretLeftBold className={iconsStyles} />
+        <PiCaretLeftBold />
       </button>
-      <button 
-        className={btnStyles} 
-        onClick={() => swiper?.slideNext()}
-        aria-label="Slide suivant"
+      <button
+        onClick={() => swiper.slideNext()}
+        className={btnStyles}
+        aria-label="Suivant"
       >
-        <PiCaretRightBold className={iconsStyles} />
+        <PiCaretRightBold />
       </button>
     </div>
   );
-};
-
-export default WorkSliderBtns;
+}

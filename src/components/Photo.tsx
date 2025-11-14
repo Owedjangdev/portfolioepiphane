@@ -1,66 +1,67 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const Photo = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <div className="w-full h-full relative flex items-center justify-center">
+    <div ref={ref} className="relative w-full flex justify-center xl:justify-end">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
-        }}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={isInView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative"
       >
-        {/* Image container */}
-        <motion.div className="relative w-[200px] h-[200px]  xl:w-[350px] xl:h-[350px] z-10">
+        {/* Image avec bordure douce */}
+        <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 rounded-full overflow-hidden shadow-2xl ring-4 ring-accent/20">
           <Image
             src="/photo.png"
             priority
-            quality={100}
+            quality={95}
             fill
             alt="Epiphane Houehanou"
-            className="object-contain rounded-full"
-            
+            className="object-cover"
           />
-        </motion.div>
+        </div>
 
-        {/* Circle animé */}
+        {/* Cercle animé magique (plus fluide) */}
         <motion.svg
-          className="absolute top-0 left-0 w-[200px] xl:w-[350px] h-[200px] xl:h-[350px]"
+          className="absolute -inset-4 w-[calc(100%+32px)] h-[calc(100%+32px)]"
           fill="transparent"
-          viewBox="0 0 350 350"
+          viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.circle
-            cx="175"
-            cy="175"
-            r="170"
-            stroke="#2563eb"
+            cx="253"
+            cy="253"
+            r="248"
+            stroke="url(#gradient)"
             strokeWidth="3"
             strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={{ strokeDasharray: "20 10 0 0" }}
-            animate={{
-              strokeDasharray: [
-                "15 120 25 25",
-                "16 25 92 72",
-                "4 250 22 22"
-              ],
-              rotate: [120, 360],
-            }}
+            initial={{ strokeDasharray: "0 1000" }}
+            animate={isInView ? { strokeDasharray: "50 1000" } : {}}
             transition={{
               duration: 20,
               repeat: Infinity,
-              repeatType: "reverse",
+              ease: "linear",
             }}
           />
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
+              <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#ec4899" stopOpacity="0.8" />
+            </linearGradient>
+          </defs>
         </motion.svg>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Photo 
+export default Photo;
