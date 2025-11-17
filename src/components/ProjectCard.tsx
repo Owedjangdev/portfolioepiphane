@@ -10,7 +10,17 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Project } from "./projectsData";
+
+interface Project {
+  num: string;
+  category: string;
+  title: string;
+  description: string;
+  image: string;
+  stack: string[];
+  live?: string;
+  github?: string;
+}
 
 interface ProjectCardProps {
   project: Project;
