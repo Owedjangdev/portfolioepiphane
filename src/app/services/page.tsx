@@ -1,10 +1,10 @@
+
 "use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowDownRight, BsCodeSlash, BsLaptop, BsRocket } from "react-icons/bs";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useInView } from "react-intersection-observer";
 
 const services = [
   {
@@ -30,42 +30,55 @@ const services = [
   },
 ];
 
+// Variantes corrigées – 100% compatibles TypeScript + Vercel
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
+  hidden: { opacity: 0, y: 50 },
+  visible: {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.2,
       duration: 0.6,
       ease: "easeOut",
+      staggerChildren: 0.15,
     },
-  }),
+  },
 };
 
 export default function Services() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+    rootMargin: "-100px 0px",
+  });
 
   return (
     <section ref={ref} className="py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white"
         >
           Mes Services
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <motion.div
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+        >
           {services.map((service, index) => (
             <motion.div
               key={index}
-              custom={index}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
               className="group flex flex-col p-6 sm:p-8 bg-surface/50 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-accent/50 transition-all duration-300"
@@ -86,7 +99,7 @@ export default function Services() {
               </h3>
 
               {/* Description */}
-              <p className="text-muted flex-grow mb-6 leading-relaxed">
+              <p className="text-white/70 flex-grow mb-6 leading-relaxed">
                 {service.description}
               </p>
 
@@ -109,7 +122,7 @@ export default function Services() {
               <div className="mt-6 h-px bg-gradient-to-r from-accent/0 via-accent to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
