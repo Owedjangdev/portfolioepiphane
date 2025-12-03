@@ -24,7 +24,7 @@ export default function MobileNav() {
         <CiMenuFries className="h-[25px] w-[25px] text-accent" />
       </SheetTrigger>
 
-      <SheetContent  side="right" className=" flex flex-col w-full sm:max-w-full">
+      <SheetContent side="right" className="flex flex-col w-full sm:max-w-full">
         <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
         
         {/* logo */}
