@@ -12,9 +12,6 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   display: 'swap',
   adjustFontFallback: false,
-  fallback: ["monospace"], // Explicit fallback
-  preload: true,
-  timeout: 5000, // Timeout after 5 seconds to prevent hanging
 });
 
 export const metadata: Metadata = {
