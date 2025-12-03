@@ -8,10 +8,13 @@ import PageTransition from "@/components/PageTransitions";
 // Configuration optimisée
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "700"], // On garde seulement les poids essentiels
+  weight: ["400", "700"],
   variable: "--font-jetbrains",
   display: 'swap',
   adjustFontFallback: false,
+  fallback: ["monospace"], // Explicit fallback
+  preload: true,
+  timeout: 5000, // Timeout after 5 seconds to prevent hanging
 });
 
 export const metadata: Metadata = {

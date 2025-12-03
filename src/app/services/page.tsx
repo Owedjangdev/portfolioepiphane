@@ -33,13 +33,14 @@ export default function Services() {
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4">
         {/* Titre */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16 text-white">
           Mes Services
         </h2>
 
-        {/* Grille */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => (
+        {/* Grille centré */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {services.map((service, index) => (
             <div
               key={index}
               className="group flex flex-col p-6 sm:p-8 bg-surface/50 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-accent/50 hover:shadow-2xl hover:shadow-accent/10 transition-all duration-500"
@@ -77,6 +78,7 @@ export default function Services() {
               <div className="mt-6 h-px bg-gradient-to-r from-accent/0 via-accent to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>

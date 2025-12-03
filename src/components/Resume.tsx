@@ -16,25 +16,27 @@ export default function Resume() {
       className="min-h-screen py-12 xl:py-16"
     >
       <div className="container mx-auto px-4">
-        <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-8 xl:gap-12">
-          {/* Onglets */}
-          <TabsList className="flex flex-col w-full max-w-xs mx-auto xl:mx-0 gap-3 p-2 bg-surface/50 backdrop-blur-sm rounded-xl border border-white/10">
-            <TabsTrigger value="experience" className="text-lg py-3 px-5 rounded-lg data-[state=active]:bg-accent data-[state=active]:text-white">
-              Expérience
-            </TabsTrigger>
-            <TabsTrigger value="education" className="text-lg py-3 px-5 rounded-lg data-[state=active]:bg-accent data-[state=active]:text-white">
-              Formation
-            </TabsTrigger>
-            <TabsTrigger value="skills" className="text-lg py-3 px-5 rounded-lg data-[state=active]:bg-accent data-[state=active]:text-white">
-              Compétences
-            </TabsTrigger>
-            <TabsTrigger value="about" className="text-lg py-3 px-5 rounded-lg data-[state=active]:bg-accent data-[state=active]:text-white">
-              À propos
-            </TabsTrigger>
-          </TabsList>
+        <Tabs defaultValue="experience" className="flex flex-col gap-8">
+          {/* Tabs centré */}
+          <div className="flex justify-center">
+            <TabsList className="flex flex-col w-full sm:flex-row sm:w-auto sm:max-w-2xl gap-3 p-3 bg-surface/50 backdrop-blur-sm rounded-xl border border-white/10">
+              <TabsTrigger value="experience" className="text-base sm:text-lg py-3 px-6 rounded-lg whitespace-nowrap data-[state=active]:bg-accent data-[state=active]:text-white">
+                Expérience
+              </TabsTrigger>
+              <TabsTrigger value="education" className="text-base sm:text-lg py-3 px-6 rounded-lg whitespace-nowrap data-[state=active]:bg-accent data-[state=active]:text-white">
+                Formation
+              </TabsTrigger>
+              <TabsTrigger value="skills" className="text-base sm:text-lg py-3 px-6 rounded-lg whitespace-nowrap data-[state=active]:bg-accent data-[state=active]:text-white">
+                Compétences
+              </TabsTrigger>
+              <TabsTrigger value="about" className="text-base sm:text-lg py-3 px-6 rounded-lg whitespace-nowrap data-[state=active]:bg-accent data-[state=active]:text-white">
+                À propos
+              </TabsTrigger>
+            </TabsList>
+          </div>
 
           {/* Contenu */}
-          <div className="flex-1">
+          <div className="w-full max-w-3xl mx-auto">
             <ResumeExperience />
             <ResumeEducation />
             <ResumeSkills />

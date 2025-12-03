@@ -19,20 +19,22 @@ export default function ProjectFilters({ onFilter }: ProjectFiltersProps) {
   };
 
   return (
-    <div className="flex flex-wrap gap-3 justify-center mb-12">
-      {categories.map((cat) => (
-        <button
-          key={cat}
-          onClick={() => handleFilter(cat)}
-          className={`px-6 py-2 rounded-full font-medium transition-all ${
-            active === cat
-              ? "bg-accent text-white"
-              : "bg-white/10 text-white/70 hover:bg-white/20"
-          }`}
-        >
-          {cat === "all" ? "Tous" : cat.charAt(0).toUpperCase() + cat.slice(1)}
-        </button>
-      ))}
+    <div className="flex justify-center mb-16">
+      <div className="flex flex-wrap gap-3 p-3 bg-surface/50 backdrop-blur-sm rounded-xl border border-white/10">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => handleFilter(cat)}
+            className={`px-6 py-3 rounded-lg font-medium transition-all whitespace-nowrap text-base ${
+              active === cat
+                ? "bg-accent text-white shadow-lg"
+                : "bg-white/10 text-white/70 hover:bg-white/20"
+            }`}
+          >
+            {cat === "all" ? "Tous" : cat.charAt(0).toUpperCase() + cat.slice(1)}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

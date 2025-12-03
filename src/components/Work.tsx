@@ -28,7 +28,7 @@ export default function Work() {
       className="min-h-screen py-12 xl:py-20"
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Mes Projets
           </h2>
@@ -40,7 +40,7 @@ export default function Work() {
         <ProjectFilters onFilter={handleFilter} />
 
         {/* Slider pour mobile */}
-        <div className="block xl:hidden mb-12">
+        <div className="block xl:hidden">
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
@@ -52,14 +52,14 @@ export default function Work() {
               </SwiperSlide>
             ))}
             <WorkSliderBtns
-              containerStyles="flex gap-3 justify-center mt-6"
+              containerStyles="flex gap-3 justify-center mt-8"
               btnStyles="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white hover:bg-accent/80 transition-all"
             />
           </Swiper>
         </div>
 
         {/* Grille pour desktop */}
-        <div className="hidden xl:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="hidden xl:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {filteredProjects.map((project, i) => (
             <motion.div
               key={i}

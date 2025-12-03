@@ -93,14 +93,15 @@ export default function Contact() {
       className="py-12 xl:py-20"
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-col xl:flex-row gap-8 xl:gap-12">
-          {/* Formulaire */}
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="xl:w-1/2 order-2 xl:order-none"
-          >
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col xl:flex-row gap-8 xl:gap-12">
+            {/* Formulaire */}
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="xl:w-1/2 order-2 xl:order-none"
+            >
             <form onSubmit={handleSubmit} className="space-y-6 p-8 bg-surface/50 backdrop-blur-sm rounded-2xl border border-white/10">
               <div>
                 <h3 className="text-3xl font-bold text-white mb-2">Travaillons ensemble</h3>
@@ -243,6 +244,7 @@ export default function Contact() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
         </div>
       </div>
     </motion.section>

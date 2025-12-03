@@ -9,17 +9,17 @@ export default function Home() {
   return (
     <section className="h-full">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-0 xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-center gap-12 xl:gap-16 xl:pt-8 xl:pb-24 max-w-5xl mx-auto">
           
           {/* PHOTO EN PREMIER SUR MOBILE */}
-          <div className="order-1 xl:order-2 flex justify-center xl:justify-end w-full xl:w-auto">
+          <div className="order-1 xl:order-2 flex justify-center flex-shrink-0">
             <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72">
               <Photo />
             </div>
           </div>
 
           {/* TEXTE & ACTIONS */}
-          <div className="order-2 xl:order-1 text-center xl:text-left flex-1 max-w-xl">
+          <div className="order-2 xl:order-1 text-center xl:text-left flex-1">
             <span className="text-sm sm:text-base md:text-lg text-white/80">
               Développeur Logiciel
             </span>
@@ -29,7 +29,7 @@ export default function Home() {
               <span className="text-accent">Epiphane Houehanou</span>
             </h1>
 
-            <p className="text-white/80 text-sm sm:text-base md:text-lg max-w-md mx-auto xl:mx-0 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-white/80 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed">
               J&apos;excelle dans la création d&apos;expériences numériques élégantes et je
               maîtrise divers langages de programmation.
             </p>
