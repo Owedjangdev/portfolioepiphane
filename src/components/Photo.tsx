@@ -20,7 +20,7 @@ const Photo = () => {
         {/* Image avec bordure douce */}
         <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 rounded-full overflow-hidden shadow-2xl ring-4 ring-accent/20">
           <Image
-            src="/photo.png"
+            src="/imageepi.jpeg"
             priority
             quality={95}
             fill
