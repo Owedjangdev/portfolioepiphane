@@ -1,6 +1,18 @@
-# Portfolio Epiphane Houehanou 
+# 🚀 Portfolio Epiphane Houehanou
 
-Un portfolio moderne et interactif développé avec Next.js 15, React 19, et Tailwind CSS. Ce site présente mes compétences en développement web, mon expérience professionnelle, et mes services.
+Un portfolio moderne, interactif et performant conçu pour mettre en avant mes compétences et mes réalisations en développement web full-stack. Développé avec les dernières technologies (Next.js 15, React 19, TypeScript) pour offrir une expérience utilisateur fluide et profesionnelle.
+
+**🌐 [Visite le site en ligne](https://houehanouepiphane.vercel.app/)**
+
+### À Propos de Moi
+
+Développeur web passionné et créatif, spécialisé dans la création d'expériences numériques modernes et performantes. Avec plus de 2 ans d'expérience, je maîtrise l'ensemble du cycle de développement web, du frontend au backend. 
+
+**Email** : houehanouepiphane@gmail.com  
+**Téléphone** : +229 01 542 15693  
+**Localisation** : Bénin  
+**Langues** : Français, Anglais  
+**Disponibilité** : Ouvert aux projets freelance
 
 ![Portfolio Preview](./public/PROJET1.png)
 
