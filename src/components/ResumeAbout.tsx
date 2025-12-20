@@ -25,7 +25,7 @@ export default function ResumeAbout() {
         <h3 className="text-3xl xl:text-4xl font-bold text-white mb-3">{about.title}</h3>
         <p className="max-w-2xl mx-auto xl:mx-0 text-white/70">{about.description}</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto xl:mx-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl">
         {about.info.map((item, i) => (
           <motion.div
             key={i}

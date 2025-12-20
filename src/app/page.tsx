@@ -8,22 +8,20 @@ import { FiDownload } from "react-icons/fi";
 export default function Home() {
   return (
     <section className="h-full">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex flex-col xl:flex-row items-center justify-center gap-12 xl:gap-16 xl:pt-8 xl:pb-24 max-w-5xl mx-auto">
-          
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-12 xl:pt-8 xl:pb-24">
+
           {/* PHOTO EN PREMIER SUR MOBILE */}
-          <div className="order-1 xl:order-2 flex justify-center flex-shrink-0">
-            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72">
-              <Photo />
-            </div>
+          <div className="order-1 xl:order-2 flex justify-center items-center flex-shrink-0">
+            <Photo />
           </div>
 
           {/* TEXTE & ACTIONS */}
-          <div className="order-2 xl:order-1 text-center xl:text-left flex-1">
+          <div className="order-2 xl:order-1 text-center xl:text-left flex-1 max-w-2xl">
             <span className="text-sm sm:text-base md:text-lg text-white/80">
-              Développeur Logiciel
+              Développeur Web
             </span>
-            
+
             <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl leading-tight font-semibold mt-2 mb-3 sm:mb-4">
               Salut, je suis <br />
               <span className="text-accent">Epiphane Houehanou</span>

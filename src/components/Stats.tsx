@@ -5,13 +5,13 @@ import CountUp from "react-countup";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+
 const stats = [
-  { num: 2, text: "Années d'expérience" },
+  { num: 3, text: "Années d'expérience" },
   { num: 10, text: "Projets terminés" },
   { num: 6, text: "Technologies maîtrisées" },
   { num: 50, text: "Commits de code" },
 ];
-
 const Stats = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -22,7 +22,7 @@ const Stats = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {stats.map((item, index) => (
             <motion.div
-              key={index}
+              key={item.text}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}

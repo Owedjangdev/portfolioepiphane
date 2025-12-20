@@ -27,7 +27,7 @@ export default function Work() {
       animate={{ opacity: 1, transition: { duration: 0.6 } }}
       className="min-h-screen py-12 xl:py-20"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Mes Projets
@@ -59,7 +59,7 @@ export default function Work() {
         </div>
 
         {/* Grille pour desktop */}
-        <div className="hidden xl:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="hidden xl:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {filteredProjects.map((project, i) => (
             <motion.div
               key={i}

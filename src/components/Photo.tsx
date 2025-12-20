@@ -17,21 +17,20 @@ const Photo = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative"
       >
-        {/* Image avec bordure douce */}
-        <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[420px] xl:h-[420px] 2xl:w-[500px] 2xl:h-[500px] rounded-full overflow-hidden shadow-2xl ring-4 ring-accent/20">
+        <div className="w-[298px] h-[298px] sm:w-[370px] sm:h-[370px] md:w-[420px] md:h-[420px] xl:w-[498px] xl:h-[498px] 2xl:w-[540px] 2xl:h-[540px] mix-blend-lighten relative">
           <Image
-            src="/imageepi.jpeg"
+            src="/imageowe.jpg"
             priority
-            quality={95}
+            quality={100}
             fill
             alt="Epiphane Houehanou"
-            className="object-cover"
+            className="object-cover rounded-full"
           />
         </div>
 
         {/* Cercle animé magique (plus fluide) */}
         <motion.svg
-          className="absolute -inset-4 w-[calc(100%+32px)] h-[calc(100%+32px)]"
+          className="absolute top-0 w-[300px] h-[300px] sm:w-[372px] sm:h-[372px] md:w-[422px] md:h-[422px] xl:w-[500px] xl:h-[500px] 2xl:w-[542px] 2xl:h-[542px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
@@ -39,25 +38,22 @@ const Photo = () => {
           <motion.circle
             cx="253"
             cy="253"
-            r="248"
-            stroke="url(#gradient)"
-            strokeWidth="3"
+            r="250"
+            stroke="#00ff99"
+            strokeWidth="4"
             strokeLinecap="round"
-            initial={{ strokeDasharray: "0 1000" }}
-            animate={isInView ? { strokeDasharray: "50 1000" } : {}}
+            strokeLinejoin="round"
+            initial={{ strokeDasharray: "24 10 0 0" }}
+            animate={{
+              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+              rotate: [120, 360],
+            }}
             transition={{
               duration: 20,
               repeat: Infinity,
-              ease: "linear",
+              repeatType: "reverse",
             }}
           />
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.8" />
-              <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.9" />
-              <stop offset="100%" stopColor="#ec4899" stopOpacity="0.8" />
-            </linearGradient>
-          </defs>
         </motion.svg>
       </motion.div>
     </div>
