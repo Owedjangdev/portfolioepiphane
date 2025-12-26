@@ -10,7 +10,7 @@ const about = {
   info: [
     { fieldName: "Nom", fieldValue: "Epiphane Houehanou" },
     { fieldName: "Téléphone", fieldValue: "+229 01 542 15693" },
-    { fieldName: "Expérience", fieldValue: "2+ ans" },
+    { fieldName: "Expérience", fieldValue: "3+ ans" },
     { fieldName: "Email", fieldValue: "epiphanedev@gmail.com" },
     { fieldName: "Freelance", fieldValue: "Disponible" },
     { fieldName: "Nationalité", fieldValue: "Bénin" },

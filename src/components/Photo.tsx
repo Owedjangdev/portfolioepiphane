@@ -25,7 +25,7 @@ const Photo = () => {
             quality={100}
             fill
             alt="Epiphane Houehanou"
-            className="object-cover rounded-full border-4 border-slate-900/50 shadow-2xl"
+            className="object-cover object-top rounded-full border-4 border-slate-900/50 shadow-2xl"
           />
         </div>
 

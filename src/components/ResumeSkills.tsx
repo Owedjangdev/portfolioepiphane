@@ -4,8 +4,8 @@
 import { TabsContent } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiExpress } from "react-icons/si";
 
 const skills = {
   title: "Mes Compétences",
@@ -17,6 +17,8 @@ const skills = {
     { icon: <FaReact />, name: "React.js" },
     { icon: <SiNextdotjs />, name: "Next.js" },
     { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+    { icon: <FaNodeJs />, name: "Node.js" },
+    { icon: <SiExpress />, name: "Express.js" },
     { icon: <FaFigma />, name: "Figma" },
   ],
 };
