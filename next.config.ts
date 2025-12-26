@@ -7,7 +7,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   experimental: {
     optimizePackageImports: ['framer-motion'],
-  }
+  },
+  // Tentative de fix pour "Bus error" (souvent lié à SWC sur certains envs)
+  productionBrowserSourceMaps: false,
 };
 
 export default nextConfig;

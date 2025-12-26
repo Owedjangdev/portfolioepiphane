@@ -19,7 +19,8 @@ module.exports = {
       xl: "1200px",
     },
     fontFamily: {
-      primary: "var(--font-jetbrains-mono)",
+      primary: "var(--font-outfit)", // Updated to Outfit
+      mono: "var(--font-jetbrains)",
     },
     extend: {
       borderRadius: {
@@ -29,17 +30,36 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: "#0a192f",
-          foreground: "#ccd6f6",
+          DEFAULT: "#ffffff", // Text is now white by default
+          foreground: "#020617",
         },
-        background: "rgb(15 23 42)",
+        background: "#020617", // Slate-950 (Deep Dark)
         accent: {
-          DEFAULT: "#3b82f6",
-          hover: "#2563eb",
-          foreground: "#ffffff",
+          DEFAULT: "#00ff99", // Placeholder, will be overridden by gradients often
+          hover: "#00e187",
         },
-        surface: "#1e293b",
-        muted: "#64748b",
+        // Premium Palette
+        slate: {
+          900: "#0f172a",
+          800: "#1e293b",
+        },
+      },
+      backgroundImage: {
+        'gradient-accent': 'linear-gradient(to right, #00c6ff, #0072ff)', // Electric Blue
+        'gradient-dark': 'radial-gradient(circle at center, #1e293b 0%, #020617 100%)',
+      },
+      animation: {
+        aurora: "aurora 60s linear infinite",
+      },
+      keyframes: {
+        aurora: {
+          "0%": {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          "100%": {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
       },
     },
   },

@@ -1,45 +1,56 @@
 "use client";
 
-import { motion } from "framer-motion";
 import CountUp from "react-countup";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-
 
 const stats = [
-  { num: 3, text: "Années d'expérience" },
-  { num: 10, text: "Projets terminés" },
-  { num: 6, text: "Technologies maîtrisées" },
-  { num: 50, text: "Commits de code" },
+    {
+        num: 3,
+        text: "Années d'expérience",
+    },
+    {
+        num: 12,
+        text: "Projets complétés",
+    },
+    {
+        num: 8,
+        text: "Technologies maîtrisées",
+    },
+    {
+        num: 500,
+        text: "Commits de code",
+    },
 ];
-const Stats = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  return (
-    <section ref={ref} className="py-8 sm:py-12 lg:py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          {stats.map((item, index) => (
-            <motion.div
-              key={item.text}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col items-center md:items-start text-center md:text-left"
-            >
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-accent">
-                {isInView && <CountUp end={item.num} duration={3} />}+
-              </div>
-              <p className="mt-1 text-sm sm:text-base text-white/70 max-w-[140px] leading-tight">
-                {item.text}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+const Stats = () => {
+    return (
+        <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
+            <div className="container mx-auto">
+                <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
+                    {stats.map((item, index) => {
+                        return (
+                            <div
+                                className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
+                                key={index}
+                            >
+                                <CountUp
+                                    end={item.num}
+                                    duration={5}
+                                    delay={2}
+                                    className="text-4xl xl:text-6xl font-extrabold text-white"
+                                />
+                                <p
+                                    className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
+                                        } leading-snug text-white/80`}
+                                >
+                                    {item.text}
+                                </p>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Stats;

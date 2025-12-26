@@ -3,25 +3,42 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --font-jetbrains: 'JetBrains Mono', monospace;
+    --font-outfit: 'Outfit', sans-serif;
+    --radius: 0.5rem;
+  }
+  
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-background text-white antialiased leading-relaxed overflow-x-hidden;
   }
 }
 
-@layer base {
-  :root {
-    --font-jetbrains: 'JetBrains Mono', monospace;
-  }
-  body {
-    font-family: var(--font-jetbrains);
-    font-weight: 400; /* Poids par défaut */
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-lg;
   }
   
-  .font-light {
-    font-weight: 300;
+  .glass-header {
+    @apply bg-[#020617]/80 backdrop-blur-md border-b border-white/5;
   }
   
-  .font-bold {
-    font-weight: 700;
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300;
   }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
 }
