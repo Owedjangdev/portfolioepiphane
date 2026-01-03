@@ -38,7 +38,7 @@ export default function Home() {
                 size="lg"
                 className="rounded-full bg-accent hover:bg-accent/80 text-slate-950 font-bold text-lg px-8 py-6 shadow-[0_0_20px_rgba(0,255,153,0.4)] transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,153,0.6)]"
               >
-                <Link href="/EpiphaneHouehanou.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <Link href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <FiDownload className="text-xl" />
                   <span>CV</span>
                 </Link>
