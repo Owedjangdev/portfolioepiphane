@@ -181,9 +181,9 @@ export default function Contact() {
                     <SelectGroup>
                       <SelectLabel>Services</SelectLabel>
                       <SelectItem value="Développement Web">Développement Web</SelectItem>
-                      <SelectItem value="Design UI/UX">Design UI/UX</SelectItem>
-                      <SelectItem value="Application Mobile">Application Mobile</SelectItem>
-                      <SelectItem value="Consulting">Consulting Tech</SelectItem>
+                     
+                      <SelectItem value="Application Mobile">optimisation SEO</SelectItem>
+                      
                     </SelectGroup>
                   </SelectContent>
                 </Select>
